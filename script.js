@@ -1,6 +1,7 @@
 const addTasks = document.querySelector('.add-tasks');
 const taskList = document.querySelector('.taskList');
-const markAllTasks = document.querySelector('.markAllTasks');
+const markAllTasks = document.querySelector('.markAll');
+const unmarkAllTasks = document.querySelector('.unmarkAll');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function addNewTask(e) {
@@ -23,6 +24,9 @@ function populateList(tasks = [], taskList) {
       <input type="checkbox" name="check" data-index=${i} id="task${i}" ${task.status ? 'checked' : ''} />
       <label for="task${i}">${task.taskTitle}</label>
     </li>
+
+
+
     `;
     }).join('');
 }
@@ -37,28 +41,25 @@ function toggleDone(e) {
     populateList(tasks, taskList);
 }
 
-function markAll(e)    
+function toggle(source)    
  {
-    console.log(e)
+   // console.log('click');
 
-//     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-//     for (var i = 0; i < checkboxes.length; i++) {
-//         if (checkboxes[i] != false)
-//             checkboxes[i].checked = true;
-//     }
-//     // if (tasks[0].status != true){
-//     //     tasks[0].status ==true;
-//     // }
-// //     console.log(tasks.status);
-// //     const status = (document.querySelector('[name=check')).value;
-// //     console.log(status);
-// // //tasks.status = false;
-// localStorage.setItem('tasks', JSON.stringify(tasks));
-// populateList(tasks, taskList);
-}
+     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // console.log(checkboxes);
+    for (var i = 0; i < checkboxes.length; i++) {
+       if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+            tasks[i].status = !tasks[i].status;
+            
+    }
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    populateList(tasks, taskList);
 
+    
 populateList(tasks, taskList);
 
 addTasks.addEventListener('submit', addNewTask);
 taskList.addEventListener('click', toggleDone);
 markAllTasks.addEventListener('click', markAll);
+unmarkAllTasks.addEventListener('click', unmarkAll);

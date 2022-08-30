@@ -39,7 +39,9 @@
     <form class="add-tasks">
       <input type="text" name="taskTitle" placeholder="Insert a new task" required>
       <input type="submit" value="+ Add Task">
-      <input type="button" name="mark" value="mark all" onclick="markAll()">
+      <input type="button" name="mark" value="mark all" onclick="markAll(this)">
+      <input type="button" name="unmark" value="unmark all" onclick="unmarkAll()">
+      <input type="checkbox" onclick="toggle(this);" />Check all?<br />
     </form>
   </div>
 
