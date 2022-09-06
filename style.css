@@ -27,7 +27,7 @@ html {
   
   .wrapper {
     padding: 20px;
-    max-width: 350px;
+    max-width: 550px;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -57,9 +57,10 @@ html {
     cursor: pointer;
   }
   
-  /* .taskList input {
-    display: none;
-  } */
+   /* .taskList input {
+    display: block;
+  }  */
+
   #bubu {
     display: block;
   }
@@ -81,4 +82,30 @@ html {
     padding: 10px;
     outline: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  .xuxu {
+    display: none;
+  }
+/* 
+    .taskListV input {
+    display: block;
+  }
+*/
+  .classita {
+    display: block;
+  } 
+
+  .btnEdit {
+    display: none;
+  }
+
+  .pipi {
+    display: block;
+  }
+
+  .pipo {
+    display: none;
   }
