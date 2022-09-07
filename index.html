@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>ToDoList</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/f42b55a19f.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-    viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-     </svg> -->
-
   <div class="wrapper">
-   
     <header>
-    <h2>NOT ToDo List</h2>
-    <p>dizem que nos unimos mais pelas coisas que não gostamos do que pelas coisas que gostamos. uma lista de coisas para não fazer.</p>
-    <p>quer melhorar e lembrar o que NÃO fazer? use a NOT TO DO LIST</p>
-  </header>
-  <main>
-    <ul class="taskList">
-      <li>Loading Tasks...</li>
-    </ul>
-    <form class="add-tasks">
-    
-      <input type="text" name="taskTitle" placeholder="Insert a new task" required>
-      <input type="submit" value="+ Add Task">
-      <!-- <input type="button" name="mark" value="mark all" onclick="markAll(this)">
-      <input type="button" name="unmark" value="unmark all" onclick="unmarkAll()"> -->
-      <input type="checkbox" onclick="toggle(this);" />Check all?<br />
-    </form>
-  </main>
+      <h2>NOT ToDo List</h2>
+      <p>dizem que nos unimos mais pelas coisas que não gostamos do que pelas coisas que gostamos. uma lista de coisas
+        para não fazer.</p>
+      <p>quer melhorar e lembrar o que NÃO fazer? use a NOT TO DO LIST</p>
+    </header>
+    <main>
+      <ul class="taskList">
+        <li>Loading Tasks...</li>
+      </ul>
+      <form class="add-tasks">
+        <input type="text" name="taskTitle" placeholder="Insert a new task" required>
+        <input type="submit" value="+ Add Task">
+        <input type="checkbox" onclick="toggleAllTasks(this)" />Check all?<br />
+      </form>
+    </main>
   </div>
-
- 
   <script src="./script.js"></script>
-
 </body>
-
 </html>

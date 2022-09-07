@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font-size: 62.5%; */
+   --hue: 324;
+
+  --primary-color: hsl(var(--hue), 100%, 50%);
+  --background-color: hsl(calc(var(--hue) - 17), 100%, 65%, 0.784);
+ }
+
+ /* html,
+body {
+  height: 100vh;
+} */
+
+
 html {
     box-sizing: border-box;
     /* background: url("oh-la-la.jpeg") center no-repeat;
@@ -10,11 +30,11 @@ html {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   }
   
-  *,
+  /* *,
   *:before,
   *:after {
     box-sizing: inherit;
-  }
+  } */
   
   /* svg {
     fill: white;
@@ -24,6 +44,7 @@ html {
     width: 200px;
     margin-bottom: 50px;
   } */
+  
   
   .wrapper {
     padding: 20px;
@@ -43,11 +64,14 @@ html {
     padding: 0;
     text-align: left;
     list-style: none;
+    
   }
   
   .taskList li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px 0;
+
+    
     font-weight: 100;
     display: flex;
   }
@@ -57,14 +81,31 @@ html {
     cursor: pointer;
   }
   
-   /* .taskList input {
-    display: block;
-  }  */
-
-  #bubu {
-    display: block;
-  }
-  
+    .taskList input:not(#updateTask) {
+    display: none;
+  }  
+/* 
+  .taskList button {
+    background-color: var(--primary-color);
+    color: #be2626;
+    border: none;
+    /* border-radius: 4rem; */
+    /* margin-bottom: 6rem; */
+/*
+    padding-right: .6rem;
+    width: fit-content;
+margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     gap: 1.6rem; 
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 200ms;
+}
+   */
   .taskList input + label:before {
     content: "⬜️";
     margin-right: 10px;
@@ -86,26 +127,11 @@ html {
 
 
 
-  .xuxu {
-    display: none;
-  }
-/* 
-    .taskListV input {
-    display: block;
-  }
-*/
-  .classita {
-    display: block;
-  } 
-
-  .btnEdit {
+  .hideElement {
     display: none;
   }
 
-  .pipi {
-    display: block;
-  }
 
-  .pipo {
-    display: none;
+  .showElement {
+    display: block;
   }
