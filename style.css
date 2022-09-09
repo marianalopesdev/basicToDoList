@@ -6,37 +6,38 @@
 
 :root {
   /* font-size: 62.5%; */
-   --hue: 324;
+  --hue: 126;
 
   --primary-color: hsl(var(--hue), 100%, 50%);
   --background-color: hsl(calc(var(--hue) - 17), 100%, 65%, 0.784);
- }
+  --check-color: hsl(var(--hue), 72%, 65%);
+}
 
- /* html,
+/* html,
 body {
   height: 100vh;
 } */
 
 
 html {
-    box-sizing: border-box;
-    /* background: url("oh-la-la.jpeg") center no-repeat;
+  box-sizing: border-box;
+  /* background: url("oh-la-la.jpeg") center no-repeat;
     background-size: cover; */
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  }
-  
-  /* *,
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+/* *,
   *:before,
   *:after {
     box-sizing: inherit;
   } */
-  
-  /* svg {
+
+/* svg {
     fill: white;
     background: rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -44,53 +45,69 @@ html {
     width: 200px;
     margin-bottom: 50px;
   } */
-  
-  
-  .wrapper {
-    padding: 20px;
-    max-width: 550px;
-    background: rgba(198, 229, 249, 0.95);
-    box-shadow: 0 0 0 10px rgba(193, 233, 34, 0.758);
-  }
-  
-  h2 {
-    text-align: center;
-    margin: 0;
-    font-weight: 200;
-  }
-  
-  .taskList {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    list-style: none;
-    
-  }
-  
-  .taskList li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-
-    
-    font-weight: 100;
-    display: flex;
-  }
-  
-  .taskList label {
-    flex: 1;
+/* .css-button-sharp--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: 2px solid #57cc99;
+    background: #57cc99;
   }
-  
-    .taskList input:not(#updateTask) {
-    display: none;
-  }  
+
+  .css-button-sharp--green:hover {
+    background: #fff;
+    color: #57cc99
+  }
+   */
+.wrapper {
+  padding: 20px;
+  max-width: 550px;
+  background: rgba(198, 229, 249, 0.95);
+  box-shadow: 0 0 0 10px rgba(193, 233, 34, 0.758);
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: 200;
+}
+
+.taskList {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.taskList li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+}
+
+.taskList label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.taskList input:not(#updateTask) {
+  display: none;
+}
+
 /* 
   .taskList button {
     background-color: var(--primary-color);
     color: #be2626;
     border: none;
     /* border-radius: 4rem; */
-    /* margin-bottom: 6rem; */
+/* margin-bottom: 6rem; */
 /*
     padding-right: .6rem;
     width: fit-content;
@@ -106,32 +123,47 @@ margin-right: 1rem;
     transition: background 200ms;
 }
    */
-  .taskList input + label:before {
-    content: "⬜️";
-    margin-right: 10px;
-  }
-  
-  .taskList input:checked + label:before {
-    content: "🤢";
-  }
-  
-  .add-tasks {
-    margin-top: 20px;
-  }
-  
-  .add-tasks input {
-    padding: 10px;
-    outline: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
+   
+.taskList input+label:before {
+  content: "⬜️";
+  margin-right: 10px;
+}
 
+.taskList input:checked+label:before {
+  content: "🤢";
+}
 
+.add-tasks {
+  margin-top: 20px;
+}
 
-  .hideElement {
-    display: none;
-  }
+.add-tasks input {
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
+.button {
+  display: flex;
+  border-radius: .5rem;
+  background-color: aliceblue;
+  width: 1.7rem;
+  height: 1.7rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  margin-left: .4rem;
+}
 
-  .showElement {
-    display: block;
-  }
+.button:hover {
+  background-color: azure;
+}
+
+.showElement {
+  display: block;
+}
+
+.hideElement {
+  display: none;
+}

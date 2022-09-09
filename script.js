@@ -9,8 +9,13 @@ const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 populateTaskList(tasks, taskList);
 
-addTasks.addEventListener('submit', addNewTask);
-taskList.addEventListener('change', toggleDone);
+addTasks.addEventListener("submit", addNewTask);
+taskList.addEventListener("change", toggleDone);
+// btn.addEventListener("click", preventDefault);
+
+// function preventDefault(event) {
+//     event.preventDefault();
+// }
 
 function addNewTask(e) {
     e.preventDefault();
@@ -31,14 +36,20 @@ function populateTaskList(tasks = [], taskList) {
             <li>
             <input type="checkbox" data-index=${i} id="task${i}" ${task.status ? 'checked' : ''} />
             <label for="task${i}" contentEditable="false">${task.taskTitle}</label>   
-            <button type="button" data-index=${i} name="editButton"  onclick="editTask(this)">edit</button>     
-            <button type="button" data-index=${i} name="deleteButton" onclick="deleteTask(this)">
-            X</button>
+            <a class="button" href="#" data-index=${i} name="editButton"  onclick="editTask(this)" />
+            <img src="./assets/pencil-line.svg"><img>
+            </a>
+            <a class="button" href="#" data-index=${i} name="deleteButton"  onclick="deleteTask(this)" />
+            <img src="./assets/trash.svg"><img>
+            </a>
             <input type="text" id="updateTask" name="updateInput" class="hideElement" required>
-            <button type="button" data-index=${i} name="updateButton" class="hideElement" onclick="saveTask(this)" >V</button>
+            <a class="hideElement button" href="#" data-index=${i} name="updateButton"  onclick="saveTask(this)" />
+            <img src="./assets/check-circle.svg"><img>
+            </a>
             `;
     }).join('');
 }
+
 
 function deleteTask(e) {
     const taskIndex = e.dataset.index;
@@ -73,8 +84,7 @@ function saveOnLocalStorage() {
 }
 
 function saveTask(e) {
-    const taskIndex = e.dataset.index;    
-    // console.log(updateInput[taskIndex].value);
+    const taskIndex = e.dataset.index;
     if (updateInput[taskIndex].value == "") {
         tasks[taskIndex].taskTitle = tasks[taskIndex].taskTitle;
     }
@@ -85,10 +95,19 @@ function saveTask(e) {
 }
 
 function editTask(e) {
-    const taskIndex = e.dataset.index;   
+    const taskIndex = e.dataset.index;
 
-    updateInput[taskIndex].classList.remove("hideElement");   
-    updateButton[taskIndex].classList.remove("hideElement");    
+    for (let i = 0; i < tasks.length; i++) {
+        if (taskIndex != updateButton[i]) {
+            updateInput[i].classList.add("hideElement");
+            updateButton[i].classList.add("hideElement");
+            deleteButton[i].classList.remove("hideElement");
+            editButton[i].classList.remove("hideElement");
+        }
+    }
+
+    updateInput[taskIndex].classList.remove("hideElement");
+    updateButton[taskIndex].classList.remove("hideElement");
     deleteButton[taskIndex].classList.add("hideElement");
     editButton[taskIndex].classList.add("hideElement");
 
