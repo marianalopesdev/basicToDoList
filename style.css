@@ -123,7 +123,7 @@ margin-right: 1rem;
     transition: background 200ms;
 }
    */
-   
+
 .taskList input+label:before {
   content: "⬜️";
   margin-right: 10px;
@@ -166,4 +166,14 @@ margin-right: 1rem;
 
 .hideElement {
   display: none;
+}
+
+
+
+
+@media (max-width:450px) {
+
+ body {
+  background-color: blue;
+ }
 }
