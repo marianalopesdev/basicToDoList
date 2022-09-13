@@ -39,7 +39,7 @@ body {
   /* font-family: 'DM Sans'; */
   font-size: 1.6rem;
   text-align: center;
-  /* overflow: overlay; ? */
+  overflow: overlay; 
   background-color: var(--brand-light-2);
 }
 
@@ -57,7 +57,7 @@ body {
 
   transform: translate(0vh, 1vh);
   /* border: .1rem solid #DDDDDD; */
-  /* overflow: hidden; precisa mesmo?*/
+  overflow: hidden; 
   justify-self: center;
   
 
@@ -82,7 +82,7 @@ main {
   /* justify-content: center; precisa mesmo?*/
   align-items: center;
   background-color: honeydew;
-  /* overflow: auto; precisa mesmo?*/
+  overflow: auto; 
 
 }
 
@@ -169,7 +169,7 @@ p {
   margin-left: 2.5rem;
   /* border:2px solid #FF0000; */
   border-radius: .5rem;
-  outline-color: red;
+  outline-color: khaki;
   
 }
  
@@ -276,7 +276,7 @@ footer {
 
 @media (max-width:400px) {
   footer {
-    background-color: green;
+    background-color: pink;
 
   }
 
