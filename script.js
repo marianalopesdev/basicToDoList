@@ -17,6 +17,8 @@ taskList.addEventListener("change", toggleDone);
 //     event.preventDefault();
 // }
 
+
+
 function addNewTask(e) {
     e.preventDefault();
     const taskTitle = (document.querySelector('[name=taskTitle')).value;
@@ -28,6 +30,7 @@ function addNewTask(e) {
     populateTaskList(tasks, taskList);
     saveOnLocalStorage();
     this.reset();
+    taskTitle.focus();
 }
 
 function populateTaskList(tasks = [], taskList) {

@@ -28,9 +28,9 @@
             <li>Loading Tasks...</li>
           </ul>
           <form class="add-tasks">
-            <input type="text" name="taskTitle" placeholder="Insert a new task" required>
-            <input type="submit" value="+ Add Task" class="css-button-sharp--green">
-            <input type="checkbox" onclick="toggleAllTasks(this)" />Check all?<br />
+            <input type="text" name="taskTitle" class="taskTitle" placeholder="Insert a new task" required autofocus>
+            <input type="submit" value="+ Add Task" class="css-button-rounded--green">
+            <input type="checkbox" class="checkAll" onclick="toggleAllTasks(this)" /><label class="checkAll">Check all?</label> <br />
             
           </form>
         </div>
