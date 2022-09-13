@@ -50,8 +50,8 @@ body {
 
 .wrapper {
   width: min(55rem, 100%);
-  /* margin-inline: auto; ? */
-  /* padding-inline: 2.4rem; precisa mesmo?*/
+  margin-inline: auto; 
+  padding-inline: 2.4rem; 
   background: rgba(198, 229, 249, 0.95);
   box-shadow: 0 0 0 1rem var(--primary-color);
 
