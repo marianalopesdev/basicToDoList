@@ -50,8 +50,8 @@ body {
 
 .wrapper {
   width: min(55rem, 100%);
-  margin-inline: auto; 
-  padding-inline: 2.4rem; 
+   margin-inline: auto;
+   padding-inline: 2.4rem; 
   background: rgba(198, 229, 249, 0.95);
   box-shadow: 0 0 0 1rem var(--primary-color);
 
@@ -70,7 +70,7 @@ header {
   align-items: center;
   text-align: center;
   height: 15vh;
-  background-color: aqua;
+background-color: deeppink;
   padding: 2rem 1rem;
 
 }
@@ -79,7 +79,7 @@ main {
   display: flex;
   flex-direction: column;
   max-height: 78vh;
-  /* justify-content: center; precisa mesmo?*/
+   justify-content: center; 
   align-items: center;
   background-color: honeydew;
   overflow: auto; 
@@ -265,6 +265,7 @@ footer {
 @media (max-width:800px) {
   footer {
     background-color: royalblue;
+    
 
   }
 
