@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +29,7 @@ html {
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: 50vh;
 }
 
 body {
@@ -49,15 +49,77 @@ body {
     width: min(80rem, 100%);
  } */
 
-.wrapper {
-    padding: 2rem;
+ /*.wrapper {
+   * padding: 2rem;
     max-width: 55rem;
     background: rgba(198, 229, 249, 0.95);
-    box-shadow: 0 0 0 10px rgba(193, 233, 34, 0.758);
-    margin:1rem;
-    margin-inline: auto;
+    box-shadow: 0 0 0 10px rgba(193, 233, 34, 0.758); */
+    /* margin:1rem;*/
+    /* margin-inline: auto;  
    
+  } */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --nav-height: 7.2rem;
+
+    --hue: 294;
+
+    --primary-color: hsl(var(--hue), 41%, 47%);
+    --second-color-light: hsl(293, 41%, 92%);
+    --headline: hsl(210, 11%, 15%);
+    --paragraph: hsl(210, 9%, 31%);
+    --brand-beige: hsl(39, 100%, 97%);
+    --brand-light: hsl(calc(var(--hue) - 1), 41%, 92%);
+    --brand-light-2: hsl(calc(var(--hue) - 1), 40%, 96%);
+    --brand-hover: hsl(var(--hue), 41%, 28%);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: 'DM Sans';
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: overlay;
+    background-color: var(--brand-light-2);
+}
+
+@font-face {
+    font-family: 'Floren';
+    src: URL('./assets/fonts/FLOREN.ttf') format('truetype');
   }
+
+.wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+    background: rgba(198, 229, 249, 0.95);
+    box-shadow: 0 0 0 10px rgba(193, 233, 34, 0.758); 
+    
+    
+    transform: translate(0vh, 1vh);
+    border: 1px solid #DDDDDD;
+    overflow: hidden;
+    
+    
+}
 
 header {
        display: flex;
@@ -66,15 +128,18 @@ header {
     text-align: center;
     height: 15vh;
     background-color: aqua;
+    padding: 1rem;
+    
    }
   
   main {
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 73vh;
     justify-content: center;
     align-items: center;
-    background-color: coral;
+    background-color: honeydew;
+    overflow:auto; 
   }
   
 
@@ -84,6 +149,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: darkkhaki;
+    padding-bottom: 2rem;
   }
 
   h1 {
@@ -108,6 +174,7 @@ header {
         text-align: left;
         list-style: none;
         width: 90%;
+        padding-left: 40px;
       }
       
       .taskList li {
@@ -116,6 +183,7 @@ header {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding: 10px 0;
         font-weight: 100;
+        
         
       }
       
@@ -141,7 +209,7 @@ header {
    font-family: 'Font Awesome\ 5 Free';
    content: "\f11a";
    margin-right: 1rem;
-   
+       /* font-weight: 900; */
   }
   
   .add-tasks {
@@ -178,3 +246,53 @@ header {
   .hideElement {
     display: none;
   }
+
+  .taskListContainer{
+    background-color: whitesmoke;
+    overflow-y: auto;
+    justify-content: center;
+    width: 95%;
+    padding-bottom: 2rem;
+
+    
+  }
+
+  @media (min-width: 1024px) {
+
+    body {
+        overflow: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width:800px) {
+    footer{
+      background-color: blueviolet;
+  
+    }
+
+    body {
+      font-size: 2rem;
+    }
+    }
+
+    
+  @media (max-width:400px) {
+    footer{
+      background-color: green;
+  
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+    }
