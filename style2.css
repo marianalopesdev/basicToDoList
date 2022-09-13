@@ -264,8 +264,16 @@ footer {
 
 @media (max-width:800px) {
   footer {
-    background-color: blueviolet;
+    background-color: royalblue;
 
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
   }
 
   body {
@@ -276,7 +284,7 @@ footer {
 
 @media (max-width:400px) {
   footer {
-    background-color: pink;
+    background-color: orangered;
 
   }
 
