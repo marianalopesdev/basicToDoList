@@ -33,13 +33,13 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   max-height: 98vh;
-  /* font-family: 'DM Sans'; */
+  font-family: 'Libre Franklin', sans-serif;
   font-size: 1.6rem;
   text-align: center;
-  overflow: overlay; 
+  overflow: overlay;
   background-color: var(--brand-light-2);
 }
 
@@ -50,16 +50,16 @@ body {
 
 .wrapper {
   width: min(55rem, 100%);
-   margin-inline: auto;
-   padding-inline: 2.4rem; 
+  margin-inline: auto;
+  padding-inline: 2.4rem;
   background: rgba(198, 229, 249, 0.95);
   box-shadow: 0 0 0 1rem var(--primary-color);
 
   transform: translate(0vh, 1vh);
   /* border: .1rem solid #DDDDDD; */
-  overflow: hidden; 
+  overflow: hidden;
   justify-self: center;
-  
+
 
 
 }
@@ -69,8 +69,8 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 15vh;
-background-color: deeppink;
+  /* height: 15vh; */
+  background-color: lavenderblush;
   padding: 2rem 1rem;
 
 }
@@ -79,10 +79,10 @@ main {
   display: flex;
   flex-direction: column;
   max-height: 78vh;
-   justify-content: center; 
+  justify-content: center;
   align-items: center;
   background-color: honeydew;
-  overflow: auto; 
+  overflow: auto;
 
 }
 
@@ -90,7 +90,6 @@ main {
 
 
 h1 {
-  /* font-family: 'Swiss 721 Black Rounded'; */
   text-transform: uppercase;
   font-size: 4rem;
   color: var(--headline);
@@ -102,15 +101,15 @@ p {
   color: var(--paragraph);
 }
 
-/* 
-  ul {
-    list-style: none;
-    } */
+
+ul {
+  list-style: none;
+}
 
 .taskList {
   display: flex;
   flex-direction: column;
-  
+  padding-top: 1rem;
   text-align: left;
   list-style: none;
   width: 90%;
@@ -150,18 +149,24 @@ p {
   font-family: 'Font Awesome\ 5 Free';
   content: "\f11a";
   margin-right: 1rem;
-  /* font-weight: 900; */
+
 }
 
 .add-tasks {
-  margin-top: 3rem;
+  margin-top: rem;
 }
 
 .add-tasks input {
   padding: 1rem;
   /* outline: 0; */
   border: .1rem solid rgba(0, 0, 0, 0.1);
-  
+
+}
+
+.addTasks {
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+
 }
 
 .taskTitle {
@@ -170,9 +175,9 @@ p {
   /* border:2px solid #FF0000; */
   border-radius: .5rem;
   outline-color: khaki;
-  
+
 }
- 
+
 .button {
   display: flex;
   border-radius: .5rem;
@@ -205,8 +210,9 @@ p {
   border-radius: 5px;
   border: 2px solid #57cc99;
   background: #57cc99;
-  margin-right:3rem ;
+  margin-right: 3rem;
 }
+
 .css-button-rounded--green:hover {
   background: #fff;
   color: #57cc99
@@ -215,7 +221,7 @@ p {
 
 .checkAll {
   padding-right: 2rem;
-  
+
   color: rebeccapurple;
   margin-right: .5rem;
 }
@@ -243,8 +249,9 @@ footer {
   height: 5vh;
   justify-content: center;
   align-items: center;
-  background-color: darkkhaki;
+  background-color: gainsboro;
   padding: 2.5vh;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 1024px) {
@@ -263,31 +270,10 @@ footer {
 }
 
 @media (max-width:800px) {
-  footer {
-    background-color: royalblue;
-    
-
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.5rem;
-  }
 
   body {
     font-size: 2rem;
   }
-}
-
-
-@media (max-width:400px) {
-  footer {
-    background-color: orangered;
-
-  }
 
   h1 {
     font-size: 2rem;
@@ -296,4 +282,45 @@ footer {
   p {
     font-size: 1.5rem;
   }
+
+  .taskList input+label:before {
+    content: "⬜️";
+    margin-right: 10px;
+  }
+
+  .taskList input:checked+label:before {
+    content: "🤢";
+  }
+  footer {
+    background-color: royalblue;
+  }  
+}
+
+
+@media (max-width:400px) {
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .taskList input+label:before {
+    content: "⬜️";
+    margin-right: 1rem;
+  }
+
+  .taskList input:checked+label:before {
+    content: "🤢";
+  }
+
+  footer {
+    background-color: orangered;
+  } 
 }

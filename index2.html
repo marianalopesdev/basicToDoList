@@ -11,6 +11,9 @@
     <script>
         FontAwesomeConfig = { searchPseudoElements: true };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;400;500&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -18,24 +21,26 @@
     <header>
         <div>
         <h1>NOT To-Do List</h1>
-        <p>we all can try to be a better person. </p>
-            <p>do your things but always remember what not to do to improve as a human being.</p>
+        <p>we can try to be a better person. </p>
+            <p>do your stuff but always remember what <i>not to do</i> to improve as a human being.</p>
    
     </header>
     <main>
-        <div class="taskListContainer">
+        <div class="taskListContainer" id="lista">
         <ul class="taskList">
             <li>Loading Tasks...</li>
           </ul>
-          <form class="add-tasks">
-            <input type="text" name="taskTitle" class="taskTitle" placeholder="Insert a new task" required autofocus>
-            <input type="submit" value="+ Add Task" class="css-button-rounded--green">
-            <input type="checkbox" class="checkAll" onclick="toggleAllTasks(this)" /><label class="checkAll">Check all?</label> <br />
-            
-          </form>
+       
         </div>
+        <div class="addTasks">
+            <form class="add-tasks">
+              <input type="text" name="taskTitle" class="taskTitle" placeholder="Insert a new task" required autofocus>
+              <input type="submit" value="+ Add Task" class="css-button-rounded--green">
+              <input type="checkbox" class="checkAll" onclick="toggleAllTasks(this)" /><label class="checkAll">Check all?</label> <br />              
+            </form>
+          </div>
     </main> <footer>
-        footer
+        dinobot 2022
     </footer>
 </div>
     

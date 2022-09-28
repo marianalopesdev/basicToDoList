@@ -30,7 +30,8 @@ function addNewTask(e) {
     populateTaskList(tasks, taskList);
     saveOnLocalStorage();
     this.reset();
-    taskTitle.focus();
+    taskList.scrollIntoView({block: "end"});
+    console.log(lista);
 }
 
 function populateTaskList(tasks = [], taskList) {
