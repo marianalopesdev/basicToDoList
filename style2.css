@@ -86,9 +86,6 @@ main {
 
 }
 
-
-
-
 h1 {
   text-transform: uppercase;
   font-size: 4rem;
@@ -100,7 +97,6 @@ p {
   font-size: 2rem;
   color: var(--paragraph);
 }
-
 
 ul {
   list-style: none;
@@ -123,8 +119,6 @@ ul {
   padding: 1rem 0;
   font-weight: 100;
   align-items: center;
-
-
 }
 
 .taskList label {
@@ -141,7 +135,6 @@ ul {
   font-family: 'Font Awesome\ 5 Free';
   content: "\f0c8";
   margin-right: 1rem;
-
 }
 
 .taskList input:checked+label:before {
@@ -149,7 +142,6 @@ ul {
   font-family: 'Font Awesome\ 5 Free';
   content: "\f11a";
   margin-right: 1rem;
-
 }
 
 .add-tasks {
@@ -166,7 +158,6 @@ ul {
 .addTasks {
   padding-bottom: 1rem;
   padding-top: 2rem;
-
 }
 
 .taskTitle {
@@ -175,7 +166,6 @@ ul {
   /* border:2px solid #FF0000; */
   border-radius: .5rem;
   outline-color: khaki;
-
 }
 
 .button {
@@ -221,7 +211,6 @@ ul {
 
 .checkAll {
   padding-right: 2rem;
-
   color: rebeccapurple;
   margin-right: .5rem;
 }
@@ -240,8 +229,6 @@ ul {
   justify-content: center;
   width: 95%;
   padding-bottom: 2rem;
-
-
 }
 
 footer {
@@ -272,7 +259,7 @@ footer {
 @media (max-width:800px) {
 
   body {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -280,17 +267,22 @@ footer {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .taskList input+label:before {
     content: "⬜️";
-    margin-right: 10px;
+    margin-right: 1rem;
   }
 
   .taskList input:checked+label:before {
     content: "🤢";
   }
+  
+.checkAll {
+  font-size: 1.5rem;  
+}
+
   footer {
     background-color: royalblue;
   }  
@@ -300,15 +292,15 @@ footer {
 @media (max-width:400px) {
 
   body {
-    font-size: 1.3rem;
-  }
-
-  h1 {
     font-size: 1.5rem;
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
   p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .taskList input+label:before {
@@ -320,7 +312,57 @@ footer {
     content: "🤢";
   }
 
+  .checkAll {
+    font-size: 1.5rem;
+  }  
+
   footer {
     background-color: orangered;
+    
+  } 
+}
+
+
+
+@media (max-height:450px) {
+
+  header {
+    height: 22vh;
+    /* padding-bottom: 1rem; */
+  }
+
+  main {
+    height: 65vh;
+  }
+
+  body {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #57cc99;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .taskList input+label:before {
+    content: "⬜️";
+    margin-right: 1rem;
+  }
+
+  .taskList input:checked+label:before {
+    content: "🤢";
+  }
+
+  .checkAll {
+    font-size: 1.5rem;
+  }  
+
+  footer {
+    background-color: orangered;
+    height: 6vh;
   } 
 }
